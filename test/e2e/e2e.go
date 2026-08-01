@@ -462,7 +462,7 @@ var _ = g.Describe("cluster-config-operator", func() {
 		o.Expect(hasDataKey || hasBinaryKey).To(o.BeTrue(), "kube-cloud-config ConfigMap should contain 'cloud.conf' key")
 	})
 
-	g.It("should reconcile and recreate kube-cloud-config when deleted [apigroup:config.openshift.io][Operator][Serial]", func() {
+	g.It("should reconcile and recreate kube-cloud-config when deleted [apigroup:config.openshift.io][Operator][Serial][Disruptive]", func() {
 		config, err := getClientConfig()
 		o.Expect(err).NotTo(o.HaveOccurred(), "failed to get client config")
 
